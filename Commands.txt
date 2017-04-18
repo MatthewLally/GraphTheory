@@ -57,6 +57,7 @@ CREATE(: SecondYearModule { module:'ADV. PROCEDURAL PROGRAMMING'}),
 (: SecondYearModule { module:'APPLD NETWORKING TECH'}),
 (: SecondYearModule { module:'DATA STRUCTURES & ALGORITHMS'}),
 (: SecondYearModule { module:'ACCTG'}),
+(: SecondYearModule { module:'DATABASE MGMT'}),
 (: SecondYearModule { module:'PROJ MGT & COLLABORATIVE COMM'});
 
 //Third Year Module Nodes
@@ -70,18 +71,20 @@ CREATE (: ThirdYearModule { module:'GRAPH THEORY'}),
 
 //Lecturer Nodes
 CREATE (: Lecturer {name :'Ian McLoughlin'} ),
-(: Lecturer {name :'Deirdre O Donovan '} ),
-(: Lecturer {name :'Patrick Mannion '} ),
+(: Lecturer {name :'Deirdre O Donovan'} ),
+(: Lecturer {name :'Patrick Mannion'} ),
 (: Lecturer {name :'Gerard Harrison'} ),
 (: Lecturer {name :'John Healy'} ),
 (: Lecturer {name :'Daniel Cregg'} ),
 (: Lecturer {name :'Martin Hynes'} ),
 (: Lecturer {name :'Neil Keane'} ),
 (: Lecturer {name :'Damien Costello'} ),
-(: Lecturer {name :'Kevin O Brien '} ),
+(: Lecturer {name :'Kevin O Brien'} ),
 (: Lecturer {name :'Micheal Duignan'} ), 
 (: Lecturer {name :'Aoife O Brien'} ), 
-(: Lecturer {name :'Brian McGinley'} ), 
+(: Lecturer {name :'Brian McGinley'} ),
+(: Lecturer {name :'Annette Cosgrove'} ) 
+(: Lecturer {name :'Gerry Agnew'} ),
 (: Lecturer {name :'John Farrell'} );
 
 //Creating the relationships
@@ -96,6 +99,47 @@ create (mod)-[:In]->(y)
 match (mod: ThirdYearModule), (y: Year{year:'Year Three'})
 create (mod)-[:In]->(y)
 
+//Lecturer and Module Relationship
+
+match (l: Lecturer { name:'Ian McLoughlin'}), (m: ThirdYearModule{ module:'GRAPH THEORY'})
+create (l)-[:Teaches]->(m)
+
+match (l: Lecturer { name:'John Healy'}), (m: SecondYearModule { module:'DATA STRUCTURES & ALGORITHMS'})
+create (l)-[:Teaches]->(n), (l)-[:Teaches]->(m)
+
+match (l: Lecturer { name:'Deirdre O Donovan '}),(k: Lecturer { name:'Patrick Mannion '}), (m: SecondYearModule { module:'APPLD NETWORKING TECH'}), (n: ThirdYearModule { module:'Database Mgmt Sys'})
+create (l)-[:Teaches]->(n), (l)-[:Teaches]->(m), (k)-[:Teaches]->(n)
+
+match (l: Lecturer { name:'Brian McGinley'}), (m: FirstYearModule { module:'COMP TECH'})
+create (l)-[:Teaches]->(m)
+
+
+match (l: Lecturer { name:'Annette Cosgrove'}), (m: SecondYearModule { module:'ACCTG'})
+create (l)-[:Teaches]->(m)
+
+match (l: Lecturer { name:'Gerard Harrison'}), (m: SecondYearModule { module:'PROJ MGT & COLLABORATIVE COMM'}), (m1: ThirdYearModule { module:'SERVER SIDE RAD'})
+create (l)-[:Teaches]->(m1), (l)-[:Teaches]->(m)
+
+match (l: Lecturer { name:'Daniel Cregg'}), (m: SecondYearModule { module:'MOBILE APPLICATIONS DEVELOPMENT'})
+create (l)-[:Teaches]->(m)
+
+match (l: Lecturer { name:'Neil Keane'}), (m: SecondYearModule { module:'DATABASE MGMT'})
+create (l)-[:Teaches]->(m)
+
+match (l: Lecturer { name:'Martin Hynes'}), (m: ThirdYearModule { module:'Software Testing'}), (m1: SecondYearModule { module:'ADV. PROCEDURAL PROGRAMMING'})
+create (l)-[:Teaches]->(m1), (l)-[:Teaches]->(m)
+
+match (l: Lecturer { name:'Damien Costello'}), (m: SecondYearModule { module:'MOBILE APPLICATIONS DEVELOPMENT'}), (m1: ThirdYearModule { module:'PROFESSIONAL PRACTICE IN IT'})
+create (l)-[:Teaches]->(m1), (l)-[:Teaches]->(m)
+
+match (l: Lecturer { name:'Gerry Agnew'}), (m: FirstYearModule { module:'SOFTWARE DESIGN & PROG DEV 1 '})
+create (l)-[:Teaches]->(m)
+
+match (l: Lecturer { name:'Kevin O Brien '}), (b: Lecturer { name:'Micheal Duignan'}), (m: FirstYearModule { module:'GRAPH USER INTERFACE&WEB DEV'})
+create (l)-[:Teaches]->(m), (b)-[:Teaches]->(m)
+
+match (l: Lecturer { name:'Aoife O Brien'}), (m: FirstYearModule { module:'ESSENTIAL MATHS FOR COMP '})
+create (l)-[:Teaches]->(m)
 
 
 

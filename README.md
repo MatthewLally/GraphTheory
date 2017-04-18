@@ -50,11 +50,13 @@ Next I had to create the lecturers. To do find the information on the lecturers 
 > CREATE (: Lecturer {name :'Ian McLoughlin'} );
 
 ## **_Adding the relationships_**
-
-The first relationship I decided to add was a relationship between a module and the year it takes place . An example of what I did to create a relationship between the years and the modules in first year is  
+At first I was not entirely sure how to create relationships using cypher. A quick google search however gave me this stackoverflow answer : http://stackoverflow.com/questions/20456002/adding-relationship-to-existing-nodes-with-cypher . I will be using commands similar to this for most of the relationships I will be creating.  The first relationship I decided to add was a relationship between a module and the year it takes place . An example of what I did to create a relationship between the years and the modules in first year is  
 > match (mod: FirstYearModule), (y: Year{year:'Year One'})
 create (mod)-[:In]->(y)
 
+The next relationship I had to create was a relationship between a lecturer and the module they teach. To do this for my lecturer Ian McLoughlin and the class he teaches graph theory I did the following :
+> match (l: Lecturer { name:'Ian McLoughlin'}), (m: ThirdYearModule{ module:'GRAPH THEORY'})
+create (l)-[:Teaches]->(m)
 
 
 
