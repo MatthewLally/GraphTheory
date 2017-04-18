@@ -33,7 +33,16 @@ Cypher is inspired by SQL , it allows us to state what we want to select, insert
 Neo4j and and Cypher is essentially the equvililant to MySQL and SQL. The main difference being that MySQL is a relational database management system and SQL (Structured Query Language) is MySQL's supporting language.
 
 ## **_Creating the database_**
-Before creating the database , I had to sit down and think what information would be needed in the database. I would need information on the student groups, the lecturers, classrooms and the hours when the lectures would run. I also had to consider that a student group could not be in the two different rooms at the same time and that a lecturer could not be in two different rooms at the same time. For the purposes of my project I looked at the first three years of the Software Development course in GMIT.
+Before creating the database , I had to sit down and think what information would be needed in the database. I would need information on the student groups, the lecturers, classrooms and the hours when the lectures would run. I also had to consider that a student group could not be in the two different rooms at the same time and that a lecturer could not be in two different rooms at the same time. For the purposes of my project I looked at the first three years of the Software Development course in GMIT. I first created nodes for the days of the week, I did this by adding the following command
+> CREATE (: Day { day:'Monday'});
+
+Next I had to go on too the http://timetable.gmit.ie/ and extract the data I need for the rooms the lectures for each module were taking place in. I did this by viewing the page source on each courses timetable. I started off by getting the data for all the First Year software development modules and worked my way down to third year.
+To Create a room I used the following command :
+> CREATE (: Room { Number:'997'});
+
+ 
+
+
 
 
 

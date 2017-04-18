@@ -738,3 +738,13 @@ UNION
 CALL db.propertyKeys() YIELD propertyKey
 WITH COLLECT(propertyKey) AS propertyKeys
 RETURN 'propertyKeys' as a, propertyKeys as result
+2017-04-18 15:02:07.299+0000 INFO  [o.n.k.i.t.l.c.CheckPointerImpl] Check Pointing triggered by scheduler for time threshold [7]:  Starting check pointing...
+2017-04-18 15:02:07.346+0000 INFO  [o.n.k.i.t.l.c.CheckPointerImpl] Check Pointing triggered by scheduler for time threshold [7]:  Starting store flush...
+2017-04-18 15:02:07.611+0000 INFO  [o.n.k.i.s.c.CountsTracker] About to rotate counts store at transaction 7 to [C:\Users\Owner\Documents\Neo4j\GraphTheory\graphtheory\neostore.counts.db.a], from [C:\Users\Owner\Documents\Neo4j\GraphTheory\graphtheory\neostore.counts.db.b].
+2017-04-18 15:02:07.643+0000 INFO  [o.n.k.i.s.c.CountsTracker] Successfully rotated counts store at transaction 7 to [C:\Users\Owner\Documents\Neo4j\GraphTheory\graphtheory\neostore.counts.db.a], from [C:\Users\Owner\Documents\Neo4j\GraphTheory\graphtheory\neostore.counts.db.b].
+2017-04-18 15:02:08.112+0000 INFO  [o.n.k.i.t.l.c.CheckPointerImpl] Check Pointing triggered by scheduler for time threshold [7]:  Store flush completed
+2017-04-18 15:02:08.128+0000 INFO  [o.n.k.i.t.l.c.CheckPointerImpl] Check Pointing triggered by scheduler for time threshold [7]:  Starting appending check point entry into the tx log...
+2017-04-18 15:02:08.175+0000 INFO  [o.n.k.i.t.l.c.CheckPointerImpl] Check Pointing triggered by scheduler for time threshold [7]:  Appending check point entry into the tx log completed
+2017-04-18 15:02:08.190+0000 INFO  [o.n.k.i.t.l.c.CheckPointerImpl] Check Pointing triggered by scheduler for time threshold [7]:  Check pointing completed
+2017-04-18 15:02:08.190+0000 INFO  [o.n.k.i.t.l.p.LogPruningImpl] Log Rotation [0]:  Starting log pruning.
+2017-04-18 15:02:08.206+0000 INFO  [o.n.k.i.t.l.p.LogPruningImpl] Log Rotation [0]:  Log pruning complete.
