@@ -1,0 +1,42 @@
+//This text file contains the commands I used to create the database
+
+
+// Nodes 
+
+//Creates nodes for the days of the week
+
+CREATE (: Day { day:'Monday'}), 
+(: Day { day:'Tuesday'}),
+(: Day { day:'Wednesday'}),
+(: Day { day:'Thursday'}),
+(: Day { day:'Friday'});
+
+//Creates nodes for the the rooms
+
+CREATE (: Room { Number:'941'}),
+(: Room { Number:'480 CR7'}),
+(: Room { Number:'483 CR2'}),
+(: Room { Number:'484 CR1'}),
+(: Room { Number:'482 CR3'}),
+(: Room { Number:'481 CR4'}),
+(: Room { Number:'994'}),
+(: Room { Number:'903'}),
+(: Room { Number:'PF05'}),
+(: Room { Number:'373'}),
+(: Room { Number:'PF02'}),
+(: Room { Number:'PF08'}),
+(: Room { Number:'436 CR5'}),
+(: Room { Number:'996'}),
+(: Room { Number:'223'}),
+(: Room { Number:'364'}),
+(: Room { Number:'939'}),
+(: Room { Number:'470'}),
+(: Room { Number:'938'}),
+(: Room { Number:'145'}),
+(: Room { Number:'379'}),
+(: Room { Number:'162'}),
+(: Room { Number:'208'}),
+(: Room { Number:'997'}),
+(: Room { Number:'PF18'});
+
+
