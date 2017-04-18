@@ -84,6 +84,20 @@ CREATE (: Lecturer {name :'Ian McLoughlin'} ),
 (: Lecturer {name :'Brian McGinley'} ), 
 (: Lecturer {name :'John Farrell'} );
 
+//Creating the relationships
+//Year and module relationships
+
+match (mod: FirstYearModule), (y: Year{year:'Year One'})
+create (mod)-[:In]->(y)
+
+match (mod: SecondYearModule), (y: Year{year:'Year Two'})
+create (mod)-[:In]->(y)
+
+match (mod: ThirdYearModule), (y: Year{year:'Year Three'})
+create (mod)-[:In]->(y)
+
+
+
 
 
 

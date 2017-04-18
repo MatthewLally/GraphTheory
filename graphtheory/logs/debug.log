@@ -770,3 +770,39 @@ RETURN 'propertyKeys' as a, propertyKeys as result
 2017-04-18 16:25:14.428+0000 INFO  [o.n.k.i.t.l.c.CheckPointerImpl] Check Pointing triggered by scheduler for time threshold [18]:  Check pointing completed
 2017-04-18 16:25:14.444+0000 INFO  [o.n.k.i.t.l.p.LogPruningImpl] Log Rotation [0]:  Starting log pruning.
 2017-04-18 16:25:14.444+0000 INFO  [o.n.k.i.t.l.p.LogPruningImpl] Log Rotation [0]:  Log pruning complete.
+2017-04-18 16:30:14.588+0000 INFO  [o.n.k.i.t.l.c.CheckPointerImpl] Check Pointing triggered by scheduler for time threshold [21]:  Starting check pointing...
+2017-04-18 16:30:14.629+0000 INFO  [o.n.k.i.t.l.c.CheckPointerImpl] Check Pointing triggered by scheduler for time threshold [21]:  Starting store flush...
+2017-04-18 16:30:14.931+0000 INFO  [o.n.k.i.s.c.CountsTracker] About to rotate counts store at transaction 21 to [C:\Users\Owner\Documents\Neo4j\GraphTheory\graphtheory\neostore.counts.db.b], from [C:\Users\Owner\Documents\Neo4j\GraphTheory\graphtheory\neostore.counts.db.a].
+2017-04-18 16:30:14.980+0000 INFO  [o.n.k.i.s.c.CountsTracker] Successfully rotated counts store at transaction 21 to [C:\Users\Owner\Documents\Neo4j\GraphTheory\graphtheory\neostore.counts.db.b], from [C:\Users\Owner\Documents\Neo4j\GraphTheory\graphtheory\neostore.counts.db.a].
+2017-04-18 16:30:15.620+0000 INFO  [o.n.k.i.t.l.c.CheckPointerImpl] Check Pointing triggered by scheduler for time threshold [21]:  Store flush completed
+2017-04-18 16:30:15.645+0000 INFO  [o.n.k.i.t.l.c.CheckPointerImpl] Check Pointing triggered by scheduler for time threshold [21]:  Starting appending check point entry into the tx log...
+2017-04-18 16:30:15.701+0000 INFO  [o.n.k.i.t.l.c.CheckPointerImpl] Check Pointing triggered by scheduler for time threshold [21]:  Appending check point entry into the tx log completed
+2017-04-18 16:30:15.721+0000 INFO  [o.n.k.i.t.l.c.CheckPointerImpl] Check Pointing triggered by scheduler for time threshold [21]:  Check pointing completed
+2017-04-18 16:30:15.745+0000 INFO  [o.n.k.i.t.l.p.LogPruningImpl] Log Rotation [0]:  Starting log pruning.
+2017-04-18 16:30:15.792+0000 INFO  [o.n.k.i.t.l.p.LogPruningImpl] Log Rotation [0]:  Log pruning complete.
+2017-04-18 17:01:47.172+0000 INFO  [o.n.k.i.t.l.c.CheckPointerImpl] Check Pointing triggered by scheduler for time threshold [23]:  Starting check pointing...
+2017-04-18 17:01:47.196+0000 INFO  [o.n.k.i.t.l.c.CheckPointerImpl] Check Pointing triggered by scheduler for time threshold [23]:  Starting store flush...
+2017-04-18 17:01:47.210+0000 INFO  [o.n.k.i.s.c.CountsTracker] About to rotate counts store at transaction 23 to [C:\Users\Owner\Documents\Neo4j\GraphTheory\graphtheory\neostore.counts.db.a], from [C:\Users\Owner\Documents\Neo4j\GraphTheory\graphtheory\neostore.counts.db.b].
+2017-04-18 17:01:47.237+0000 INFO  [o.n.k.i.s.c.CountsTracker] Successfully rotated counts store at transaction 23 to [C:\Users\Owner\Documents\Neo4j\GraphTheory\graphtheory\neostore.counts.db.a], from [C:\Users\Owner\Documents\Neo4j\GraphTheory\graphtheory\neostore.counts.db.b].
+2017-04-18 17:01:47.467+0000 INFO  [o.n.k.i.t.l.c.CheckPointerImpl] Check Pointing triggered by scheduler for time threshold [23]:  Store flush completed
+2017-04-18 17:01:47.477+0000 INFO  [o.n.k.i.t.l.c.CheckPointerImpl] Check Pointing triggered by scheduler for time threshold [23]:  Starting appending check point entry into the tx log...
+2017-04-18 17:01:47.522+0000 INFO  [o.n.k.i.t.l.c.CheckPointerImpl] Check Pointing triggered by scheduler for time threshold [23]:  Appending check point entry into the tx log completed
+2017-04-18 17:01:47.532+0000 INFO  [o.n.k.i.t.l.c.CheckPointerImpl] Check Pointing triggered by scheduler for time threshold [23]:  Check pointing completed
+2017-04-18 17:01:47.543+0000 INFO  [o.n.k.i.t.l.p.LogPruningImpl] Log Rotation [0]:  Starting log pruning.
+2017-04-18 17:01:47.554+0000 INFO  [o.n.k.i.t.l.p.LogPruningImpl] Log Rotation [0]:  Log pruning complete.
+2017-04-18 17:02:05.292+0000 INFO  [o.n.c.i.ExecutionEngine] Discarded stale query from the query cache: MATCH (a)-[r]->(b) WHERE id(a) IN {node_ids}
+AND id(b) IN {new_node_ids}
+RETURN r;
+2017-04-18 17:02:05.309+0000 INFO  [o.n.c.i.CypherCompiler] Discarded stale query from the query cache: MATCH (a)-[r]->(b) WHERE id(a) IN {node_ids}
+AND id(b) IN {new_node_ids}
+RETURN r;
+2017-04-18 17:10:37.960+0000 INFO  [o.n.k.i.t.l.c.CheckPointerImpl] Check Pointing triggered by scheduler for time threshold [24]:  Starting check pointing...
+2017-04-18 17:10:37.991+0000 INFO  [o.n.k.i.t.l.c.CheckPointerImpl] Check Pointing triggered by scheduler for time threshold [24]:  Starting store flush...
+2017-04-18 17:10:38.007+0000 INFO  [o.n.k.i.s.c.CountsTracker] About to rotate counts store at transaction 24 to [C:\Users\Owner\Documents\Neo4j\GraphTheory\graphtheory\neostore.counts.db.b], from [C:\Users\Owner\Documents\Neo4j\GraphTheory\graphtheory\neostore.counts.db.a].
+2017-04-18 17:10:38.022+0000 INFO  [o.n.k.i.s.c.CountsTracker] Successfully rotated counts store at transaction 24 to [C:\Users\Owner\Documents\Neo4j\GraphTheory\graphtheory\neostore.counts.db.b], from [C:\Users\Owner\Documents\Neo4j\GraphTheory\graphtheory\neostore.counts.db.a].
+2017-04-18 17:10:38.179+0000 INFO  [o.n.k.i.t.l.c.CheckPointerImpl] Check Pointing triggered by scheduler for time threshold [24]:  Store flush completed
+2017-04-18 17:10:38.194+0000 INFO  [o.n.k.i.t.l.c.CheckPointerImpl] Check Pointing triggered by scheduler for time threshold [24]:  Starting appending check point entry into the tx log...
+2017-04-18 17:10:38.241+0000 INFO  [o.n.k.i.t.l.c.CheckPointerImpl] Check Pointing triggered by scheduler for time threshold [24]:  Appending check point entry into the tx log completed
+2017-04-18 17:10:38.241+0000 INFO  [o.n.k.i.t.l.c.CheckPointerImpl] Check Pointing triggered by scheduler for time threshold [24]:  Check pointing completed
+2017-04-18 17:10:38.257+0000 INFO  [o.n.k.i.t.l.p.LogPruningImpl] Log Rotation [0]:  Starting log pruning.
+2017-04-18 17:10:38.272+0000 INFO  [o.n.k.i.t.l.p.LogPruningImpl] Log Rotation [0]:  Log pruning complete.

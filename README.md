@@ -51,6 +51,12 @@ Next I had to create the lecturers. To do find the information on the lecturers 
 
 ## **_Adding the relationships_**
 
+The first relationship I decided to add was a relationship between a module and the year it takes place . An example of what I did to create a relationship between the years and the modules in first year is  
+> match (mod: FirstYearModule), (y: Year{year:'Year One'})
+create (mod)-[:In]->(y)
+
+
+
 
  
 
