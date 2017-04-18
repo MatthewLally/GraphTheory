@@ -955,3 +955,15 @@ RETURN r;
 2017-04-18 19:36:08.710+0000 INFO  [o.n.k.i.t.l.c.CheckPointerImpl] Check Pointing triggered by scheduler for time threshold [42]:  Check pointing completed
 2017-04-18 19:36:08.726+0000 INFO  [o.n.k.i.t.l.p.LogPruningImpl] Log Rotation [0]:  Starting log pruning.
 2017-04-18 19:36:08.726+0000 INFO  [o.n.k.i.t.l.p.LogPruningImpl] Log Rotation [0]:  Log pruning complete.
+2017-04-18 20:02:12.079+0000 INFO  [o.n.k.i.f.GraphDatabaseFacadeFactory] Shutdown started
+2017-04-18 20:02:12.102+0000 INFO  [o.n.k.i.f.GraphDatabaseFacadeFactory] Database is now unavailable
+2017-04-18 20:02:12.277+0000 INFO  [o.n.k.i.t.l.c.CheckPointerImpl] Check Pointing triggered by database shutdown [42]:  Starting check pointing...
+2017-04-18 20:02:12.289+0000 INFO  [o.n.k.i.t.l.c.CheckPointerImpl] Check Pointing triggered by database shutdown [42]:  Starting store flush...
+2017-04-18 20:02:12.472+0000 INFO  [o.n.k.i.t.l.c.CheckPointerImpl] Check Pointing triggered by database shutdown [42]:  Store flush completed
+2017-04-18 20:02:12.485+0000 INFO  [o.n.k.i.t.l.c.CheckPointerImpl] Check Pointing triggered by database shutdown [42]:  Starting appending check point entry into the tx log...
+2017-04-18 20:02:12.562+0000 INFO  [o.n.k.i.t.l.c.CheckPointerImpl] Check Pointing triggered by database shutdown [42]:  Appending check point entry into the tx log completed
+2017-04-18 20:02:12.574+0000 INFO  [o.n.k.i.t.l.c.CheckPointerImpl] Check Pointing triggered by database shutdown [42]:  Check pointing completed
+2017-04-18 20:02:12.586+0000 INFO  [o.n.k.i.t.l.p.LogPruningImpl] Log Rotation [0]:  Starting log pruning.
+2017-04-18 20:02:12.596+0000 INFO  [o.n.k.i.t.l.p.LogPruningImpl] Log Rotation [0]:  Log pruning complete.
+2017-04-18 20:02:14.443+0000 INFO  [o.n.k.i.DiagnosticsManager] --- STOPPING diagnostics START ---
+2017-04-18 20:02:14.474+0000 INFO  [o.n.k.i.DiagnosticsManager] --- STOPPING diagnostics END ---
