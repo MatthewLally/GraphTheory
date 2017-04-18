@@ -40,6 +40,18 @@ Next I had to go on too the http://timetable.gmit.ie/ and extract the data I nee
 To Create a room I used the following command :
 > CREATE (: Room { Number:'997'});
 
+The next thing I did was to again go on to http://timetable.gmit.ie/ and extract the names for the modules each year of the software development course. To do this I used two different commands in cypher. I used the following command to create the years of the course
+> CREATE (: Year { year: 'Year One'});
+
+To create a command for the modules I did used the following command : 
+> CREATE(: FirstYearModule { module:'SOFTWARE DESIGN & PROG DEV 1 '});
+
+Next I had to create the lecturers. To do find the information on the lecturers I logged onto https://learnonline.gmit.ie/ and using the search course option entered in the names of each module and got the lecturer name. The command I then used to create each lecturer was 
+> CREATE (: Lecturer {name :'Ian McLoughlin'} );
+
+## **_Adding the relationships_**
+
+
  
 
 

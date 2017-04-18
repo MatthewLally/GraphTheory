@@ -39,4 +39,57 @@ CREATE (: Room { Number:'941'}),
 (: Room { Number:'997'}),
 (: Room { Number:'PF18'});
 
+//Create nodes for the course years
+CREATE (: Year { year: 'Year One'}),
+(: Year { year:'Year Two'}),
+(: Year { year: 'Year Three'});
+
+//Create Nodes for the first year modules
+CREATE(: FirstYearModule { module:'SOFTWARE DESIGN & PROG DEV 1 '}),
+(: FirstYearModule { module:'ESSENTIAL MATHS FOR COMP '}),
+(: FirstYearModule { module:'COMP TECH'}),
+(: FirstYearModule { module:'E-BUSINESS ADMIN'}),
+(: FirstYearModule { module:'GRAPH USER INTERFACE&WEB DEV'});
+
+//Create Nodes for the second year modules
+CREATE(: SecondYearModule { module:'ADV. PROCEDURAL PROGRAMMING'}),
+(: SecondYearModule { module:'MOBILE APPLICATIONS DEVELOPMENT'}),
+(: SecondYearModule { module:'APPLD NETWORKING TECH'}),
+(: SecondYearModule { module:'DATA STRUCTURES & ALGORITHMS'}),
+(: SecondYearModule { module:'ACCTG'}),
+(: SecondYearModule { module:'PROJ MGT & COLLABORATIVE COMM'});
+
+//Third Year Module Nodes
+
+CREATE (: ThirdYearModule { module:'GRAPH THEORY'}),
+(: ThirdYearModule { module:'Software Testing'}),
+(: ThirdYearModule { module:'SERVER SIDE RAD'}),
+(: ThirdYearModule { module:'Database Mgmt Sys'}),
+(: ThirdYearModule { module:'MOBILE APPS'}),
+(: ThirdYearModule { module:'PROFESSIONAL PRACTICE IN IT'});
+
+//Lecturer Nodes
+CREATE (: Lecturer {name :'Ian McLoughlin'} ),
+(: Lecturer {name :'Deirdre O Donovan '} ),
+(: Lecturer {name :'Patrick Mannion '} ),
+(: Lecturer {name :'Gerard Harrison'} ),
+(: Lecturer {name :'John Healy'} ),
+(: Lecturer {name :'Daniel Cregg'} ),
+(: Lecturer {name :'Martin Hynes'} ),
+(: Lecturer {name :'Neil Keane'} ),
+(: Lecturer {name :'Damien Costello'} ),
+(: Lecturer {name :'Kevin O Brien '} ),
+(: Lecturer {name :'Micheal Duignan'} ), 
+(: Lecturer {name :'Aoife O Brien'} ), 
+(: Lecturer {name :'Brian McGinley'} ), 
+(: Lecturer {name :'John Farrell'} );
+
+
+
+
+
+
+
+
+
 
