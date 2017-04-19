@@ -142,6 +142,12 @@ match (l: Lecturer { name:'Aoife O Brien'}), (m: FirstYearModule { module:'ESSEN
 create (l)-[:Teaches]->(m)
 
 
+//Rooms to modules relationships
+
+match (r: Room { Number:'484 CR1'}), (a: FirstYearModule { module:'GRAPH USER INTERFACE&WEB DEV'}),(b: FirstYearModule { module:'ESSENTIAL MATHS FOR COMP '}), 
+(c: SecondYearModule { module:'ADV. PROCEDURAL PROGRAMMING'}), (d: SecondYearModule { module:'DATA STRUCTURES & ALGORITHMS'}), 
+(e: SecondYearModule { module:'ACCTG'})
+create (a)-[:HasLabIn]->(r), (b)-[:HasLabIn]->(r), (c)-[:HasLabIn]->(r), (d)-[:HasLabIn]->(r), (e)-[:HasLabIn]->(r)
 
 
 

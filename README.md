@@ -58,7 +58,11 @@ The next relationship I had to create was a relationship between a lecturer and 
 > match (l: Lecturer { name:'Ian McLoughlin'}), (m: ThirdYearModule{ module:'GRAPH THEORY'})
 create (l)-[:Teaches]->(m)
 
-To create a relationship between a room and a module I decided to first check if the class was being held in one of the computer rooms in the college. If it was I would save this class as a lab otherwise I would save the class as a normal lecture. To add the relationship between the rooms and the classes I first started with computers rooms. I will add all the modules that take place in these rooms first and then I will move on to the normal lectures.
+To create a relationship between a room and a module I decided to first check if the class was being held in one of the computer rooms in the college. If it was I would save this class as a lab otherwise I would save the class as a normal lecture. To add the relationship between the rooms and the classes I first started with computers rooms. I will add all the modules that take place in these rooms first and then I will move on to the normal lectures. The command I used to create the relationships between the modules that take place in CR1 was :
+> match (r: Room { Number:'484 CR1'}), (a: FirstYearModule { module:'GRAPH USER INTERFACE&WEB DEV'}),(b: FirstYearModule { module:'ESSENTIAL MATHS FOR COMP '}), 
+(c: SecondYearModule { module:'ADV. PROCEDURAL PROGRAMMING'}), (d: SecondYearModule { module:'DATA STRUCTURES & ALGORITHMS'}), 
+(e: SecondYearModule { module:'ACCTG'})
+create (a)-[:HasLabIn]->(r), (b)-[:HasLabIn]->(r), (c)-[:HasLabIn]->(r), (d)-[:HasLabIn]->(r), (e)-[:HasLabIn]->(r)
 
 
  
