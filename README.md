@@ -90,16 +90,23 @@ This command works by checking the day and room number and then adds the time th
 
 ## **_Relationships and Nodes I created _**
 The relationships and nodes I created in the course of this project were : 
-| Relationships | Nodes | 
-| --- | --- |
-|HasLabIn | Day |
-|HasLectureIn | FirstYearModule |
-|In | SecondYearModule |
-|Teaches | ThirdYearModule |
-|Time | Lecturer |
-|     |Room |
-| | Year |
-|  | Group |
+ ## Relationships 
+- HasLabIn 
+- HasLectureIn 
+- In 
+- Teaches
+- Time 
+
+ ## Nodes  
+
+- Day 
+- FirstYearModule 
+- SecondYearModule 
+- ThirdYearModule 
+- Lecturer 
+- Room 
+- Year 
+- Group 
 
 
 
@@ -111,10 +118,12 @@ I do feel however that I spent far too much time scraping data from the GMIT tim
 
 ## References 
 https://neo4j.com/docs/developer-manual/current/cypher/
+
 My Lecturer Ian McLoughlins PDF Notes
 https://learnonline.gmit.ie/ 
 http://stackoverflow.com/questions/20456002/adding-relationship-to-existing-nodes-with-cypher
 http://timetable.gmit.ie/ 
+https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet
 
 
 
