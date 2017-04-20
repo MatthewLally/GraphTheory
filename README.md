@@ -64,6 +64,12 @@ To create a relationship between a room and a module I decided to first check if
 (e: SecondYearModule { module:'ACCTG'})
 create (a)-[:HasLabIn]->(r), (b)-[:HasLabIn]->(r), (c)-[:HasLabIn]->(r), (d)-[:HasLabIn]->(r), (e)-[:HasLabIn]->(r)
 
+To create a relationship a relationship between room 994 and and the lectures that take place there I used the following command : 
+> match (r: Room { Number: '994'}), (a: FirstYearModule { module:'SOFTWARE DESIGN & PROG DEV 1 '}),
+(b: FirstYearModule { module:'ESSENTIAL MATHS FOR COMP '}),(c: FirstYearModule { module:'COMP TECH'}),
+(d: FirstYearModule { module:'E-BUSINESS ADMIN'}), (e: ThirdYearModule { module:'Database Mgmt Sys'})
+create (a)-[:HasLectureIn]->(r), (b)-[:HasLectureIn]->(r), (c)-[:HasLectureIn]->(r), (d)-[:HasLectureIn]->(r), (e)-[:HasLectureIn]->(r)
+
 
  
 

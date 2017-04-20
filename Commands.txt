@@ -149,6 +149,132 @@ match (r: Room { Number:'484 CR1'}), (a: FirstYearModule { module:'GRAPH USER IN
 (e: SecondYearModule { module:'ACCTG'})
 create (a)-[:HasLabIn]->(r), (b)-[:HasLabIn]->(r), (c)-[:HasLabIn]->(r), (d)-[:HasLabIn]->(r), (e)-[:HasLabIn]->(r)
 
+match (r: Room { Number:'483 CR2'}), (a: FirstYearModule { module:'COMP TECH'}),(b: SecondYearModule { module:'ADV. PROCEDURAL PROGRAMMING'}), 
+(c: FirstYearModule { module:'SOFTWARE DESIGN & PROG DEV 1 '}), (d: FirstYearModule { module:'GRAPH USER INTERFACE&WEB DEV'}), 
+(e: ThirdYearModule { module:'Database Mgmt Sys'})
+create (a)-[:HasLabIn]->(r), (b)-[:HasLabIn]->(r), (c)-[:HasLabIn]->(r), (d)-[:HasLabIn]->(r), (e)-[:HasLabIn]->(r)
+
+match (r: Room { Number:'482 CR3'}), (a: FirstYearModule { module:'SOFTWARE DESIGN & PROG DEV 1 '}),(b: SecondYearModule { module:'APPLD NETWORKING TECH'}), 
+(c: ThirdYearModule { module:'Database Mgmt Sys'})
+create (a)-[:HasLabIn]->(r), (b)-[:HasLabIn]->(r), (c)-[:HasLabIn]->(r)
+
+match (r: Room { Number:'481 CR4'}), (a: FirstYearModule { module:'SOFTWARE DESIGN & PROG DEV 1 '}),(b: FirstYearModule { module:'GRAPH USER INTERFACE&WEB DEV'}), 
+(c: FirstYearModule { module:'ESSENTIAL MATHS FOR COMP '}), (d: SecondYearModule { module:'PROJ MGT & COLLABORATIVE COMM'}), 
+(e: ThirdYearModule { module:'Software Testing'}), (f: ThirdYearModule { module:'Database Mgmt Sys'})
+create (a)-[:HasLabIn]->(r), (b)-[:HasLabIn]->(r), (c)-[:HasLabIn]->(r), (d)-[:HasLabIn]->(r), (e)-[:HasLabIn]->(r), (f)-[:HasLabIn]->(r)
+
+
+
+match (r: Room { Number:'436 CR5'}), (a: FirstYearModule { module:'SOFTWARE DESIGN & PROG DEV 1 '}),(b: FirstYearModule { module:'GRAPH USER INTERFACE&WEB DEV'}), 
+(c: FirstYearModule { module:'COMP TECH'})
+create (a)-[:HasLabIn]->(r), (b)-[:HasLabIn]->(r), (c)-[:HasLabIn]->(r)
+
+match (r: Room { Number:'436 CR5'}), (a: SecondYearModule { module:'ADV. PROCEDURAL PROGRAMMING'})
+create (a)-[:HasLabIn]->(r)
+
+match (r: Room { Number:'436 CR5'}), (a: SecondYearModule { module:'DATA STRUCTURES & ALGORITHMS'})
+create (a)-[:HasLabIn]->(r)
+
+match (r: Room { Number:'436 CR5'}), (a: SecondYearModule { module:'PROJ MGT & COLLABORATIVE COMM'})
+create (a)-[:HasLabIn]->(r)
+
+match (r: Room { Number:'436 CR5'}), (a: ThirdYearModule{ module:'Software Testing'})
+create (a)-[:HasLabIn]->(r)
+
+match (r: Room { Number:'436 CR5'}), (a: ThirdYearModule{ module:'SERVER SIDE RAD'})
+create (a)-[:HasLabIn]->(r)
+
+match (r: Room { Number:'480 CR7'}), (a: FirstYearModule { module:'SOFTWARE DESIGN & PROG DEV 1 '}),(b: FirstYearModule { module:'GRAPH USER INTERFACE&WEB DEV'}), 
+(c: FirstYearModule { module:'COMP TECH'}), (d: SecondYearModule { module:'MOBILE APPLICATIONS DEVELOPMENT'}), 
+(e: SecondYearModule { module:'ACCTG'})
+create (a)-[:HasLabIn]->(r), (b)-[:HasLabIn]->(r), (c)-[:HasLabIn]->(r), (d)-[:HasLabIn]->(r), (e)-[:HasLabIn]->(r)
+
+match (r: Room { Number: '941'}), (a: FirstYearModule { module:'SOFTWARE DESIGN & PROG DEV 1 '}),(b: FirstYearModule { module:'GRAPH USER INTERFACE&WEB DEV'}),
+(c: FirstYearModule { module:'ESSENTIAL MATHS FOR COMP '}),(d: FirstYearModule { module:'COMP TECH'}),
+(e: FirstYearModule { module:'E-BUSINESS ADMIN'})
+create (a)-[:HasLectureIn]->(r), (b)-[:HasLectureIn]->(r), (c)-[:HasLectureIn]->(r), (d)-[:HasLectureIn]->(r), (e)-[:HasLectureIn]->(r)
+
+match (r: Room { Number: '994'}), (a: FirstYearModule { module:'SOFTWARE DESIGN & PROG DEV 1 '}),
+(b: FirstYearModule { module:'ESSENTIAL MATHS FOR COMP '}),(c: FirstYearModule { module:'COMP TECH'}),
+(d: FirstYearModule { module:'E-BUSINESS ADMIN'}), (e: ThirdYearModule { module:'Database Mgmt Sys'})
+create (a)-[:HasLectureIn]->(r), (b)-[:HasLectureIn]->(r), (c)-[:HasLectureIn]->(r), (d)-[:HasLectureIn]->(r), (e)-[:HasLectureIn]->(r)
+
+match (r: Room { Number: '903'}), (a: FirstYearModule { module:'SOFTWARE DESIGN & PROG DEV 1 '})
+create (a)-[:HasLectureIn]->(r)
+
+match (r: Room { Number: 'PF05'}), (a: FirstYearModule { module:'SOFTWARE DESIGN & PROG DEV 1 '}), (b: ThirdYearModule { module:'GRAPH THEORY'})
+create (a)-[:HasLectureIn]->(r), (b)-[:HasLectureIn]->(r)
+
+match (r: Room { Number: '373'}), (a: FirstYearModule { module:'SOFTWARE DESIGN & PROG DEV 1 '})
+create (a)-[:HasLectureIn]->(r)
+
+match (r: Room { Number: 'PF02'}), (a: FirstYearModule { module:'SOFTWARE DESIGN & PROG DEV 1 '})
+create (a)-[:HasLectureIn]->(r)
+
+match (r: Room { Number: 'PF08'}), (a: FirstYearModule { module:'SOFTWARE DESIGN & PROG DEV 1 '})
+create (a)-[:HasLectureIn]->(r)
+
+match (r: Room { Number:'996'}), (a: SecondYearModule { module:'ADV. PROCEDURAL PROGRAMMING'}), (b: SecondYearModule { module:'APPLD NETWORKING TECH'})
+create (a)-[:HasLectureIn]->(r), (b)-[:HasLectureIn]->(r)
+
+match (r: Room { Number: '223'}), (a: SecondYearModule { module:'MOBILE APPLICATIONS DEVELOPMENT'}), (b: ThirdYearModule { module:'MOBILE APPS'})
+create (a)-[:HasLectureIn]->(r), (b)-[:HasLectureIn]->(r)
+
+match (r: Room { Number: '364'}), (a: SecondYearModule { module:'DATA STRUCTURES & ALGORITHMS'})
+create (a)-[:HasLectureIn]->(r)
+
+match (r: Room { Number: '939'}), (a: SecondYearModule { module:'APPLD NETWORKING TECH'}), (b: ThirdYearModule { module:'Software Testing'})
+create (a)-[:HasLectureIn]->(r), (b)-[:HasLectureIn]->(r)
+
+match (r: Room { Number: '470'}), (a: SecondYearModule { module:'MOBILE APPLICATIONS DEVELOPMENT'}), (b: ThirdYearModule { module:'MOBILE APPS'})
+create (a)-[:HasLectureIn]->(r), (b)-[:HasLectureIn]->(r)
+
+match (r: Room { Number: '938'}), (a: SecondYearModule { module:'ACCTG'}), (b: ThirdYearModule { module:'GRAPH THEORY'})
+create (a)-[:HasLectureIn]->(r), (b)-[:HasLectureIn]->(r)
+
+match (r: Room { Number: '145'}), (a: ThirdYearModule { module:'GRAPH THEORY'})
+create (a)-[:HasLectureIn]->(r)
+
+match (r: Room { Number: '379'}), (a: ThirdYearModule { module:'GRAPH THEORY'})
+create (a)-[:HasLectureIn]->(r)
+
+match (r: Room { Number: '162'}), (a: ThirdYearModule { module:'GRAPH THEORY'})
+create (a)-[:HasLectureIn]->(r)
+
+match (r: Room { Number: '208'}), (a: ThirdYearModule { module:'GRAPH THEORY'}), (b: ThirdYearModule { module:'PROFESSIONAL PRACTICE IN IT'})
+create (a)-[:HasLectureIn]->(r), (b)-[:HasLectureIn]->(r)
+
+match (r: Room { Number: '997'}), (a: ThirdYearModule { module:'SERVER SIDE RAD'})
+create (a)-[:HasLectureIn]->(r)
+
+match (r: Room { Number: 'PF18'}), (a: ThirdYearModule { module:'MOBILE APPS'})
+create (a)-[:HasLectureIn]->(r)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
