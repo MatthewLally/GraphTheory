@@ -32,6 +32,13 @@ Cypher is inspired by SQL , it allows us to state what we want to select, insert
 
 Neo4j and and Cypher is essentially the equvililant to MySQL and SQL. The main difference being that MySQL is a relational database management system and SQL (Structured Query Language) is MySQL's supporting language.
 
+In Neo4j the user adds nodes to essentially hold their data. A node is  fundamental unit of which graphs are formed. In Neo4j relationships between nodes are added. A relationship in neo4j is directional meaning that they have a connection. This would be used in my project to show the relationship between a lecturer and the class he teaches or between a module and what year it is taught in. An example of of this from the neo4j website using their movies query is the following: 
+> MATCH (wallstreet { title: 'Wall Street' })<-[r:ACTED_IN]-(actor)
+RETURN r.role
+This will return the actors who appeared in the movie Wall Street.
+
+
+
 ## **_Creating the database_**
 Before creating the database , I had to sit down and think what information would be needed in the database. I would need information on the student groups, the lecturers, classrooms and the hours when the lectures would run. I also had to consider that a student group could not be in the two different rooms at the same time and that a lecturer could not be in two different rooms at the same time. For the purposes of my project I looked at the first three years of the Software Development course in GMIT. I first created nodes for the days of the week, I did this by adding the following command
 > CREATE (: Day { day:'Monday'});
@@ -70,11 +77,44 @@ To create a relationship a relationship between room 994 and and the lectures th
 (d: FirstYearModule { module:'E-BUSINESS ADMIN'}), (e: ThirdYearModule { module:'Database Mgmt Sys'})
 create (a)-[:HasLectureIn]->(r), (b)-[:HasLectureIn]->(r), (c)-[:HasLectureIn]->(r), (d)-[:HasLectureIn]->(r), (e)-[:HasLectureIn]->(r)
 
+The next step I decided to do was to match the rooms to the time slot on the day they were being used eg. CR5 being used at monday at six. I felt this was the hardest command to figure out throughout the project as alot of information was needed. The way I did it on for example Monday was by using the following command : 
+> match (d: Day {day: 'Monday'}), (r: Room { Number:'436 CR5'})
+create(d)<-[: Time{time:'9-10'}]-(r), 
+(d)<-[: Time{time:'10-11'}]-(r),
+(d)<-[: Time{time:'9-10'}]-(r),
+(d)<-[: Time{time:'14-15'}]-(r),
+(d)<-[: Time{time:'16-17'}]-(r),
+(d)<-[: Time{time:'17-18'}]-(r)
 
- 
+This command works by checking the day and room number and then adds the time the class is taking place. Although it isnt the longest command , it is the command that took me the longest to figure out throughout this project.
+
+## **_Relationships and Nodes I created _**
+The relationships and nodes I created in the course of this project were : 
+| Relationships | Nodes | 
+| --- | --- |
+|HasLabIn | Day |
+|HasLectureIn | FirstYearModule |
+|In | SecondYearModule |
+|Teaches | ThirdYearModule |
+|Time | Lecturer |
+|     |Room |
+| | Year |
+|  | Group |
 
 
 
+
+
+## **_Conclusion_**
+In conclusion I have to say throughout this project I learned alot about Neo4j. I feel I learned alot about planning out projects as after each step I was constantly thinking about how I would move on to the next one. I believe my knowledge of cyper has increased significantly throughout this project.
+I do feel however that I spent far too much time scraping data from the GMIT timetable site and this time would of been better served designing and implementing my database.
+
+## References 
+https://neo4j.com/docs/developer-manual/current/cypher/
+My Lecturer Ian McLoughlins PDF Notes
+https://learnonline.gmit.ie/ 
+http://stackoverflow.com/questions/20456002/adding-relationship-to-existing-nodes-with-cypher
+http://timetable.gmit.ie/ 
 
 
 

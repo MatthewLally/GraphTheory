@@ -11,6 +11,10 @@ CREATE (: Day { day:'Monday'}),
 (: Day { day:'Thursday'}),
 (: Day { day:'Friday'});
 
+CREATE (: Group{ group:'A'}),
+(: Group{ group:'B'}),
+(: Group{ group:'C'}),
+(: Group{ group:'D'}) 
 //Creates nodes for the the rooms
 
 CREATE (: Room { Number:'941'}),
@@ -43,6 +47,18 @@ CREATE (: Room { Number:'941'}),
 CREATE (: Year { year: 'Year One'}),
 (: Year { year:'Year Two'}),
 (: Year { year: 'Year Three'});
+
+//Create time blocks
+CREATE (: Time { time: '9-10'}),
+(: Time { time: '10-11'}),
+(: Time { time: '11-12'}),
+(: Time { time: '12-13'}),
+(: Time { time: '13-14'}),
+(: Time { time: '14-15'}),
+(: Time { time: '15-16'}),
+(: Time { time: '16-17'}),
+(: Time { time: '17-18'});
+
 
 //Create Nodes for the first year modules
 CREATE(: FirstYearModule { module:'SOFTWARE DESIGN & PROG DEV 1 '}),
@@ -249,6 +265,223 @@ create (a)-[:HasLectureIn]->(r)
 
 match (r: Room { Number: 'PF18'}), (a: ThirdYearModule { module:'MOBILE APPS'})
 create (a)-[:HasLectureIn]->(r)
+
+
+//Matching days too rooms
+
+match (d: Day {day: 'Monday'}), (r: Room { Number:'436 CR5'})
+create(d)<-[: Time{time:'9-10'}]-(r), 
+(d)<-[: Time{time:'10-11'}]-(r),
+(d)<-[: Time{time:'9-10'}]-(r),
+(d)<-[: Time{time:'14-15'}]-(r),
+(d)<-[: Time{time:'16-17'}]-(r),
+(d)<-[: Time{time:'17-18'}]-(r)
+
+match (d: Day {day: 'Monday'}), (r: Room { Number:'483 CR2'})
+create(d)<-[: Time{time:'9-10'}]-(r), 
+(d)<-[: Time{time:'10-11'}]-(r),
+(d)<-[: Time{time:'13-16'}]-(r)
+
+match (d: Day {day: 'Monday'}), (r: Room { Number:'484 CR1'})
+create(d)<-[: Time{time:'13-16'}]-(r), 
+(d)<-[: Time{time:'16-17'}]-(r)
+
+match (d: Day {day: 'Monday'}), (r: Room { Number:'481 CR4'})
+create(d)<-[: Time{time:'13-16'}]-(r), 
+(d)<-[: Time{time:'16-17'}]-(r)
+
+match (d: Day {day: 'Monday'}), (r: Room { Number:'480 CR7'})
+create(d)<-[: Time{time:'13-16'}]-(r)
+
+match (d: Day {day: 'Monday'}), (r: Room { Number:'994'})
+create(d)<-[: Time{time:'10-11'}]-(r)
+
+match (d: Day {day: 'Monday'}), (r: Room { Number:'470'})
+create(d)<-[: Time{time:'11-12'}]-(r), 
+(d)<-[: Time{time:'12-13'}]-(r)
+
+match (d: Day {day: 'Monday'}), (r: Room { Number:'223'})
+create(d)<-[: Time{time:'11-12'}]-(r), 
+(d)<-[: Time{time:'12-13'}]-(r),
+(d)<-[: Time{time:'13-14'}]-(r)
+
+match (d: Day {day: 'Monday'}), (r: Room { Number:'996'})
+create(d)<-[: Time{time:'12-13'}]-(r)
+
+match (d: Day {day: 'Monday'}), (r: Room { Number:'379'})
+create(d)<-[: Time{time:'13-14'}]-(r)
+
+match (d: Day {day: 'Monday'}), (r: Room { Number:'PF05'})
+create(d)<-[: Time{time:'14-15'}]-(r)
+
+match (d: Day {day: 'Monday'}), (r: Room { Number:'364'})
+create(d)<-[: Time{time:'15-16'}]-(r)
+
+match (d: Day {day: 'Monday'}), (r: Room { Number:'941'})
+create(d)<-[: Time{time:'11-12'}]-(r)
+
+match (d: Day {day: 'Tuesday'}), (r: Room { Number:'436 CR5'})
+create(d)<-[: Time{time:'9-10'}]-(r), 
+(d)<-[: Time{time:'10-11'}]-(r),
+(d)<-[: Time{time:'15-16'}]-(r),
+(d)<-[: Time{time:'16-17'}]-(r),
+(d)<-[: Time{time:'17-18'}]-(r)
+
+match (d: Day {day: 'Tuesday'}), (r: Room { Number:'481 CR4'})
+create(d)<-[: Time{time:'9-10'}]-(r), 
+(d)<-[: Time{time:'10-11'}]-(r)
+
+match (d: Day {day: 'Tuesday'}), (r: Room { Number:'480 CR7'})
+create(d)<-[: Time{time:'11-12'}]-(r), 
+(d)<-[: Time{time:'9-10'}]-(r),
+(d)<-[: Time{time:'17-18'}]-(r)
+
+match (d: Day {day: 'Tuesday'}), (r: Room { Number:'484 CR1'})
+create(d)<-[: Time{time:'14-17'}]-(r)
+
+match (d: Day {day: 'Tuesday'}), (r: Room { Number:'483 CR2'})
+create(d)<-[: Time{time:'14-17'}]-(r)
+
+match (d: Day {day: 'Tuesday'}), (r: Room { Number:'482 CR3'})
+create(d)<-[: Time{time:'14-17'}]-(r)
+
+match (d: Day {day: 'Tuesday'}), (r: Room { Number:'470'})
+create(d)<-[: Time{time:'10-11'}]-(r),
+(d)<-[: Time{time:'11-12'}]-(r),
+(d)<-[: Time{time:'12-13'}]-(r)
+
+match (d: Day {day: 'Tuesday'}), (r: Room { Number:'PF18'})
+create(d)<-[: Time{time:'11-12'}]-(r)
+
+match (d: Day {day: 'Tuesday'}), (r: Room { Number:'940'})
+create(d)<-[: Time{time:'12-13'}]-(r)
+
+match (d: Day {day: 'Tuesday'}), (r: Room { Number:'379'})
+create(d)<-[: Time{time:'12-13'}]-(r),
+(d)<-[: Time{time:'12-13'}]-(r)
+
+match (d: Day {day: 'Tuesday'}), (r: Room { Number:'939'})
+create(d)<-[: Time{time:'14-15'}]-(r)
+
+match (d: Day {day: 'Tuesday'}), (r: Room { Number:'994'})
+create(d)<-[: Time{time:'10-11'}]-(r),
+(d)<-[: Time{time:'10-11'}]-(r),
+(d)<-[: Time{time:'13-144'}]-(r)
+
+match (d: Day {day: 'Tuesday'}), (r: Room { Number:'903'})
+create(d)<-[: Time{time:'11-12'}]-(r)
+
+
+
+match(d: Day { day:'Wednesday'}), (a: Room { Number:'162'}), (b: Room { Number:'484 CR1'}), (c: Room { Number:'482 CR3'}), 
+    (e: Room { Number:'938'}), 
+    (f: Room { Number:'436 CR5'}), (g: Room { Number:'208'}), 
+    (h: Room { Number:'481 CR4'}), 
+    (i: Room { Number:'470'}), (j: Room { Number:'997'}), 
+    (k: Room { Number:'994'}), 
+    (l: Room { Number:'939'}),(m: Room { Number:'994'})	
+    
+    
+    create(d)<-[: Time{time:'9-10'}]-(a),
+(d)<-[: Time{time:'9-10'}]-(b),
+(d)<-[: Time{time:'9-10'}]-(c),
+(d)<-[: Time{time:'10-11'}]-(r),
+(d)<-[: Time{time:'10-11'}]-(e),
+(d)<-[: Time{time:'11-12'}]-(c),
+(d)<-[: Time{time:'10-11'}]-(f),
+(d)<-[: Time{time:'11-12'}]-(g), 
+(d)<-[: Time{time:'11-12'}]-(f),
+(d)<-[: Time{time:'11-12'}]-(h),
+(d)<-[: Time{time:'11-12'}]-(c),
+(d)<-[: Time{time:'12-13'}]-(f),
+(d)<-[: Time{time:'12-13'}]-(h),
+(d)<-[: Time{time:'12-13'}]-(c),
+(d)<-[: Time{time:'13-14'}]-(i),
+(d)<-[: Time{time:'13-14'}]-(j),
+(d)<-[: Time{time:'14-15'}]-(k),
+(d)<-[: Time{time:'14-15'}]-(b),
+(d)<-[: Time{time:'14-15'}]-(i),
+(d)<-[: Time{time:'15-16'}]-(i),
+(d)<-[: Time{time:'15-16'}]-(h),
+(d)<-[: Time{time:'15-16'}]-(b),
+(d)<-[: Time{time:'15-16'}]-(n),
+(d)<-[: Time{time:'16-17'}]-(m)
+
+
+match(d: Day { day:'Thursday'}), (a: Room { Number:'379'}), (b: Room { Number:'PF18'}), (c: Room { Number:'941'}),  
+    (r: Room { Number:'996'}), 
+    (e: Room { Number:'481 CR4'}), 
+    (f: Room { Number:'938'}), 
+    (g: Room { Number:'482 CR3'}), 
+    (h: Room { Number:'483 CR2'}), (i: Room { Number:'436 CR5'}), 
+    (j: Room { Number:'223'}), 
+    (l: Room { Number:'480 CR7'}), 
+    (m: Room { Number:'PF02'})
+    
+    create(d)<-[: Time{time:'9-10'}]-(a),
+(d)<-[: Time{time:'9-10'}]-(b),
+(d)<-[: Time{time:'9-10'}]-(c),
+(d)<-[: Time{time:'10-11'}]-(c),
+(d)<-[: Time{time:'10-11'}]-(b),
+(d)<-[: Time{time:'10-11'}]-(r),
+(d)<-[: Time{time:'11-12'}]-(e),
+(d)<-[: Time{time:'11-12'}]-(i),
+(d)<-[: Time{time:'12-13'}]-(l),
+(d)<-[: Time{time:'12-13'}]-(e),
+(d)<-[: Time{time:'12-13'}]-(c),
+(d)<-[: Time{time:'13-14'}]-(b),
+(d)<-[: Time{time:'13-14'}]-(f),
+(d)<-[: Time{time:'13-14'}]-(b),
+(d)<-[: Time{time:'14-15'}]-(h),
+(d)<-[: Time{time:'14-15'}]-(l),
+(d)<-[: Time{time:'14-15'}]-(h),
+(d)<-[: Time{time:'15-16'}]-(l),
+(d)<-[: Time{time:'15-16'}]-(j),
+(d)<-[: Time{time:'15-16'}]-(e),
+(d)<-[: Time{time:'16-17'}]-(i),
+(d)<-[: Time{time:'16-17'}]-(a),
+(d)<-[: Time{time:'17-18'}]-(b),
+(d)<-[: Time{time:'17-18'}]-(m),
+(d)<-[: Time{time:'9-11'}]-(c),
+(d)<-[: Time{time:'9-11'}]-(e),
+(d)<-[: Time{time:'9-11'}]-(m),
+(d)<-[: Time{time:'9-10'}]-(i),
+(d)<-[: Time{time:'10-11'}]-(h),
+(d)<-[: Time{time:'11-13'}]-(f),
+(d)<-[: Time{time:'11-12'}]-(c),
+(d)<-[: Time{time:'11-13'}]-(b),
+(d)<-[: Time{time:'11-12'}]-(f),
+(d)<-[: Time{time:'13-14'}]-(g),
+(d)<-[: Time{time:'14-15'}]-(g),
+(d)<-[: Time{time:'15-16'}]-(g),
+(d)<-[: Time{time:'15-16'}]-(m),
+(d)<-[: Time{time:'16-17'}]-(l)
+
+
+
+
+
+match(d: Day { day:'Friday'}), (a: Room { Number:'PF18'}), (b: Room { Number:'482 CR3'}), (c: Room { Number:'996'}), 
+    (x: Room { Number:'208'}), (e: Room { Number:'436 CR5'}),   
+    (g: Room { Number:'941'}), (h: Room { Number:'994'}), (j: Room { Number:'941'}), (k: Room { Number:'941'})
+
+	create(d)<-[: Time{time:'9-10'}]-(a),
+(d)<-[: Time{time:'9-10'}]-(b),
+(d)<-[: Time{time:'9-10'}]-(c),
+(d)<-[: Time{time:'10-11'}]-(a),
+(d)<-[: Time{time:'10-11'}]-(b),
+(d)<-[: Time{time:'10-11'}]-(c),
+(d)<-[: Time{time:'11-12'}]-(a),
+(d)<-[: Time{time:'11-12'}]-(x),
+(d)<-[: Time{time:'11-12'}]-(e),
+(d)<-[: Time{time:'11-12'}]-(b),
+(d)<-[: Time{time:'12-13'}]-(a),
+(d)<-[: Time{time:'12-13'}]-(e),
+(d)<-[: Time{time:'12-13'}]-(b),
+(d)<-[: Time{time:'10-11'}]-(f),
+(d)<-[: Time{time:'11-12'}]-(f),
+(d)<-[: Time{time:'12-13'}]-(f),
+(d)<-[: Time{time:'13-14'}]-(f)
 
 
 
